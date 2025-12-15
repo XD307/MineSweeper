@@ -33,7 +33,7 @@ _EVENTS = [
     ),
     Event(
         type="mirror_board",
-        message="Все теперь зеркально!!",
+        message="Все теперь зеркально!",
         payload={"mirror": True},
     ),
     Event(
