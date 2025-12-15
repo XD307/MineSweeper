@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Сапёр (простая версия)</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Сапёр с подвохом</h1>
+
+    <div class="controls">
+      <label>
+        Строки<br />
+        <input id="rows" type="number" min="2" max="20" value="9" />
+      </label>
+      <label>
+        Столбцы<br />
+        <input id="cols" type="number" min="2" max="20" value="9" />
+      </label>
+      <label>
+        Мины<br />
+        <input id="mines" type="number" min="1" value="10" />
+      </label>
+      <div>
+        <button id="new-game">Новая игра</button>
+        <button id="end-game">Завершить</button>
+      </div>
+    </div>
+
+    <div class="status">
+      <div>Размер: <strong id="size-label">—</strong></div>
+      <div>Мины: <strong id="mines-label">—</strong></div>
+      <div>Осталось безопасных клеток: <strong id="safe-left-label">—</strong></div>
+      <div id="status-text">Игра не запущена.</div>
+    </div>
+
+    <div class="event-bar">
+      Текущее событие: <strong id="event-name">—</strong>
+      <span id="event-message"></span>
+    </div>
+
+    <div id="board" class="board"></div>
+    <div id="error" class="error" style="display: none;"></div>
+  </div>
+  <img id="santa-gif" class="santa" alt="Santa" />
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
